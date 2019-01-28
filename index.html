@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html ng-app="TCAPP" id="tcApp" direction="ltr" lang="en" ng-class="{enterprises : activetab == '/enterprise-solutions/'}">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="fragment" content="!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/tc_v3.0/">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+    <meta HTTP-EQUIV="Expires" content="-1">
+    <!--<meta name="google-site-verification" content="SaJsDfPEykRRJXmlKBphHESlO_Zp3-bmeU2rIQrCiko" /> -->
+      <title>Training Calendar: Online Courses | Skill Development powered By AI</title>
+      <meta name="description" content="One Stop Destination to access a global range of training and executive education providers that can fulfill a professional, student or individual skill gaps. Online Courses, Corporate Training, Management Training in Dubai,Employee Training Programs,Training in Dubai" />
+    <!-- <title>Training Calendar | Answer to all your professional development needs.</title> -->
+    <!-- <title ng-bind="ngMeta.title"></title> 
+    <meta name="description" content="{{ngMeta.description}}" />
+    <meta name="author" content="{{ngMeta['author']}}" />
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Language" content="en" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="og_url" property="og:url" content=""/> -->
+    <!-- <meta name="author" content="David King"> -->
+    <!-- <meta name="description" content="How to manage and update meta tags in your AngularJS app"> -->
+      <!-- Indexing / Spiders -->
+    
+       <meta name="robots" content="index,follow">
+      <!-- OpenGraph -->
+      <meta property="og:type" content="article" />
+      <meta property="og:site_name" content="trainingcalendar.com" />
+      <meta property="og:title" content="Training Calendar | Global Skill Development Platform powered by AI" />
+      <meta property="og:description" content="One Stop Destination to access a global range of training and executive education providers that can fulfill a professional, student or individual skill gaps. Online Courses, Corporate Training, Management Training in Dubai,Employee Training Programs,Training in Dubai" />
+      <meta property="og:url" content="https://www.trainingcalendar.com/" />
+      <meta property="og:image" content="https://www.trainingcalendar.com/dist/images/logo.png" />
+      <meta property="og:image:width" content="680" />
+      <meta property="og:image:height" content="340" />
+    <!-- Twitter -->
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@trainingcalendar">
+      <meta name="twitter:title" content="Training Calendar | Global Skill Development Platform powered by AI">
+      <meta name="twitter:description" content="One Stop Destination to access a global range of training and executive education providers that can fulfill a professional, student or individual skill gaps. Online Courses, Corporate Training, Management Training in Dubai,Employee Training Programs,Training in Dubai">
+      <meta name="twitter:image" content="https://www.trainingcalendar.com/dist/images/logo.png">
+      
+      <link rel="shortcut icon" href="dist/images/favicon.png">
+      <!-- <script src="https://rawgithub.com/bgrins/spectrum/master/spectrum.js"></script> -->
+
+
+      <link href="dist/css/style.min.css" rel="stylesheet">
+      <link href="dist/css/purple.min.css" rel="stylesheet">
+      <link ng-if="siteData.theme != 'purple'" ng-href="dist/css/{{siteData.theme}}.min.css" rel="stylesheet">
+
+    <script>
+      // Including this code will ensure that the page is not rendered until all JavaScript has finished executing
+      window.prerenderReady = false;
+    </script>
+
+  </head>
+
+  <body class="theme-purple page_{{currentPath}} sidebar-mini" ng-class="{userlogged: userData.authenticated, login_required: requireLogin, dirRight: direction_right}" id="wrapper">
+
+  
+
+<!-- <input ng-model="color" /> -->   
+<!-- <div ng-controller="colorCtrl">         
+<input colorpicker ng-model="color" data-ng-change="changeTheme(color)"/>
+</div> -->
+
+  <div class="go-top" ng-click="scrollTop()"><img src="dist/images/tc-top.png" alt="top"/></div>
+  <a ng-if="requireLogin" id="menu-toggle" class="bars dashboard-bars">
+  </a>
+
+  
+   <div class="modal" id="eidmubarak" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="dialog">
+            <div class="modal-content">
+             <div class="close-btn float-right">
+                <button type="button" class="close" data-dismiss="modal" ng-click="closeThisDialog('Cancel')"><img src="dist/images/new_images/close.png" alt="close"></button>
+                  
+              </div>             
+                <div class="modal-body">
+                    <div class="popup-container">
+                        <div class="popup-body">
+                           <img src="dist/images/eidmubarak.jpg" alt="Eid Mubarak" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="common_modal" tabindex="-1" role="dialog" ng-controller="ModalCtrl">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">{{'your_browser_is_no_longer_supported' | translate}}</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="popup-container">
+                        <div class="popup-body">
+                            <p>For {{'for_better_security_and_an_optimized_experience_for' | translate}} <b>www.trainingcalendar.com</b>,{{'upgrade_your_browser_or_install_the_latest_version_of_any_other_browser' | translate}} </p>
+                            <p class="marginTop10">{{'click_on_any_of_the_below_icons_to_download' | translate}} </p>
+                            <table class="browser-warn-info">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a href="http://www.microsoft.com/windows/Internet-explorer/default.aspx" target="_blank">
+                                                <img src="dist/images/internet-explorer.png"><br>
+                                                <br>
+                                                {{'internet_explorer' | translate}}
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="http://www.mozilla.com/firefox/" target="_blank">
+                                                <img src="dist/images/firefox.png"><br>
+                                                <br>
+                                                {{'firefox' | translate}}
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="http://www.apple.com/safari/download/" target="_blank">
+                                                <img src="dist/images/safari.png"><br>
+                                                <br>
+                                                {{'safari' | translate}}
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="http://www.google.com/chrome" target="_blank">
+                                                <img src="dist/images/chrome.png"><br>
+                                                <br>
+                                                {{'chrome' | translate}}
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="search_modal" tabindex="-1" role="dialog" ng-controller="searchCtrl">
+        <div class="widthfull" role="document">
+            <div class="modal-content">
+        <div class="container min-height-280">
+              <div class="close-btn float-right">
+                <button type="button" class="close" data-dismiss="modal" ng-click="closeThisDialog('Cancel')"><img src="dist/images/new_images/close.png" alt="close"></button>
+                  
+              </div>
+             <div class="row">           
+                <div class="co">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <h2 class="text-center search-heading">{{'what_are_you_looking_for' | translate}}</h2>
+               </div>
+                <div class="mob-pad">
+
+                 <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 mt-120 pr-0 border-bootom-1 pl-0  mob-search">
+                      <oi-select 
+                        class="btn-group bootstrap-select drop-select"
+                        name="ctype"
+                        ng-model="ctype"
+                        oi-options="ctype.name for ctype in ctypes track by ctype.value"
+                        placeholder="{{'select_type' | translate}}"
+                        oi-select-options="{closeList: false}">
+                      </oi-select>
+                 </div>
+                 <div class="col-xs-12 col-sm-8 col-md-10 col-lg-10 mt-120 pl-0">
+                      <input ng-keydown="$event.keyCode === 13 && clickSearchbtn()" type="text"  id="keyword" ng-model="keyword" placeholder="{{'search_for' | translate}} {{ctype.name}}" uib-typeahead="res.title as res.title for res in getKeywords($viewValue)" typeahead-loading="loadingLocations" typeahead-no-results="noResults" class="search-input" typeahead-on-select="onSelect($item, $model, $label, ctype)" typeahead-focus-first="false">
+                 </div>
+              </div>
+
+               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                   <a ng-disabled="keyword.length <= 0" ng-href="{{ctype.value}}?q={{keyword}}" id="searchbtn" ng-model="searchbtn" class="go-btn float-right" ng-click="saveKeyword()">{{'go' | translate}}</a>
+               </div>
+
+               <!-- <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 mt-85 oi-select-search">
+                  <oi-select 
+          class="btn-group bootstrap-select drop-select"
+          name="ctype111"
+          ng-model="ctype111"
+          oi-options="ctype.name for ctype in ctypes track by ctype.value" 
+          placeholder="Select Type"
+          oi-select-options="{closeList: false}">
+        </oi-select>
+               </div>
+               <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 mt-85 global-search">
+                  <input type="text" ng-model="filter.location" placeholder="Enter the location">
+               </div> -->
+               
+            </div>
+         </div>
+        </div>
+         <div class="tags-bg">
+          <div class="container">
+            <div class="row">
+               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                 <h2 class="text-center tag-h2" ng-if="searchedKeywords.length > 0">{{'find_your_last_searched_keywords' | translate}}</h2>
+                 <div class="d-flex flex-wrap flex-grid mt-85">
+                   <div class="p-4 m-3" ng-repeat="searched in searchedKeywords | limitTo: 10">
+                    <a ng-click="setKeywords(searched)" class="tag-container cursor-pinter" >{{searched}}</a>
+                   </div>
+                  <!--  <div class="p-4 m-3">
+                    <a href="#" class="tag-container">conference</a>
+                   </div>
+                   <div class="p-4 m-3">
+                    <a href="#" class="tag-container">professional</a>
+                   </div>
+                   <div class="p-4 m-3">
+                    <a href="#" class="tag-container">javscript</a>
+                   </div>
+                   <div class="p-4 m-3">
+                    <a href="#" class="tag-container">professional</a>
+                   </div>
+                    <div class="p-4 m-3">
+                    <a href="#" class="tag-container">Course</a>
+                   </div>
+                    <div class="p-4 m-3">
+                    <a href="#" class="tag-container">professional</a>
+                   </div>
+                    <div class="p-4 m-3">
+                    <a href="#" class="tag-container">javscript</a>
+                   </div> -->
+                   </div>
+               </div>
+            </div>
+          </div>
+         </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="slide_search_modal" tabindex="-1" role="dialog" ng-controller="searchCtrl">
+        <div class="widthfull" role="document">
+            <div class="modal-content">
+        <div class="container">
+              <div class="close-btn float-right">
+                <button type="button" class="close" data-dismiss="modal" ng-click="closeThisDialog('Cancel')"><img src="dist/images/new_images/close.png" alt="close"></button>
+                  
+              </div>
+             <div class="row">           
+                <div class="co">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <h2 class="text-center">{{'what_slide_to_search' | translate}}</h2>
+               </div>
+                <div class="mob-pad">
+                 <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 mt-120 pl-0">
+                      <input type="text" id="slidekeyword" ng-model="slideKeyword" placeholder="{{'slide_name_to_search' | translate}}" class="search-input">
+                 </div>
+              </div>
+
+               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                   <a ng-disabled="slideKeyword.length <= 0" ng-href="slides?q={{slideKeyword}}" id="searchbtn" ng-model="searchbtn" class="go-btn float-right">{{'go' | translate}}</a>
+               </div>
+               
+            </div>
+         </div>
+        </div>
+         <div class="tags-bg mt-100">
+            <div class="container">
+              <div class="row">
+                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-100 mb-5">
+                   <h2 class="text-center tag-h2" ng-if="searchedKeywords.length > 0">{{'find_your_last_searched_keywords' | translate}}</h2>
+                   <div class="d-flex flex-wrap flex-grid mt-85">
+                     <div class="p-4 m-3" ng-repeat="searched in searchedKeywords | limitTo: 10">
+                      <a ng-click="setKeywords(searched)" class="tag-container cursor-pinter" >{{searched}}</a>
+                     </div>
+                     </div>
+                 </div>
+              </div>
+            </div>
+         </div>
+            </div>
+        </div>
+    </div>
+  <div class="modal" id="agree_modal" tabindex="-1" role="dialog" ng-controller="AgreeCtrl" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-md" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">{{'i_agree_to_the_terms_and_conditions_privacy_policy_terms_of_service' | translate}}</i></h5>
+        </div>
+        <div class="modal-body">
+          <div class="popup-container">
+            <div ng-repeat="tempData in tempData">
+              <h5 class="m-t-0">{{tempData.title}}</h5>
+              <ng-quill-editor toolbar="false" read-only="true" class="html-content" modules="{toolbar: false}" ng-model="tempData.content"></ng-quill-editor>
+            </div>
+          </div>
+        </div> 
+        <div class="modal-footer m-t-20">
+          <p>{{'training_calendar_is_an_compliance_with_gdpr_please_refer_to_our_data_processing_agreement_for_additional_information' | translate}}</p>
+          <button type="button" class="btn btn-primary pull-left m-t-15 btn-block" ng-click="iAgree()"> {{'i_agree' | translate}}</button>
+      </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Start SignUp -->
+  <div class="modal" id="signup_modal" tabindex="-1" role="dialog" ng-controller="SignUpCtrl">
+    <div class="modal-dialog modal-medium" role="document" ng-cloak>
+        <div class="modal-content signup-popup">
+            <div class="modal-header">
+                <h4 ng-if="signup_direct" class="modal-title">{{'you_are_signing_up_as' | translate}} <span class="clr-yellow">{{user_type_name}}</span></h4>
+                <h4 ng-if="!signup_direct" class="modal-title">{{signup_title}}</span></h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <form accessible-form  id="sign_up" method="POST" name="signupForm" ng-submit="signupForm.$valid &&!emailExists &&!mobileExists && submitSignupForm()" novalidate class="signup-wrap">
+                            <div class="input-group" ng-if="!signup_direct && signup_usertypes">
+                                <div class="form-line">
+                                    <oi-select oi-options="type as type.user_type for type in userTypes track by type.user_type_id" placeholder="- {{'select_user_type' | translate}}" ng-model="signup.userType" oi-select-options="{closeList: false,cleanModel: true}" name="userType" ng-change="getUserType(signup.userType)" required  ></oi-select>
+                                </div>
+                                <span class="help-error" ng-show="signup_submitted && signupForm.userType.$error.required">{{'please_select_a_user_type' | translate}}</span>
+                            </div>
+                            <div class="input-group" ng-if="user_type_id=='2' || user_type_id=='3' || user_type_id=='8'">
+                                <div class="form-line">
+                                    <input ng-disabled='loading' autocomplete="off" type="name" class="form-control" name="firstname" ng-model="signup.firstname" placeholder="{{'name' | translate}}*" ng-pattern="/^[a-zA-Z]*$/" required>
+                                </div>
+                                <span class="help-error" ng-show="signup_submitted && signupForm.firstname.$error.required">{{'please_enter_your_name' | translate}}</span>
+                                <span class="help-error" ng-show="signup_submitted && signupForm.firstname.$error.pattern">{{'please_use_only_letter' | translate}}(a-z or A-Z)</span>
+                            </div>
+
+                            <div class="input-group" ng-if="user_type_id=='4' || user_type_id=='5' || user_type_id=='9'">
+                                <div class="form-line">
+                                    <input ng-disabled='loading' autocomplete="off" type="text" class="form-control" name="company_name" ng-model="signup.company_name" placeholder="{{'company_name' | translate}}*" required>
+                                </div>
+                                <span class="help-error" ng-show="signup_submitted && signupForm.company_name.$error.required">{{'please_enter_your_company_name' | translate}}</span>
+                            </div>
+                            <div class="input-group" ng-if="user_type_id == 4 || user_type_id == 5">
+                                <div class="form-line">
+                                    <input ng-disabled='loading' autocomplete="off" type="name" class="form-control" name="firstname" ng-model="signup.firstname" placeholder="{{'contact_person_name' | translate}}*" ng-pattern="/^[a-zA-Z]*$/" letters-only required>
+                                </div>
+                                <span class="help-error" ng-show="signup_submitted && signupForm.firstname.$error.required">{{'please_enter_contact_person_name' | translate}}</span>
+                                <span class="help-error" ng-show="signup_submitted && signupForm.firstname.$error.pattern">{{'please_use_only_letters' | translate}}(a-z or A-Z)</span>
+                            </div>
+
+                            <div class="input-group" ng-if="user_type_id=='6' || user_type_id=='10'">
+                                <div class="form-line">
+                                    <input ng-disabled='loading' autocomplete="off" type="text" class="form-control" name="university" ng-model="signup.university" placeholder="{{'university_name' | translate}}*" required>
+                                </div>
+                                <span class="help-error" ng-show="signup_submitted && signupForm.university.$error.required">{{'please_enter_your_university_name' | translate}}</span>
+                            </div>
+
+                            <div class="input-group">
+                                <div class="form-line">
+                                    <input ng-disabled='loading' autocomplete="off" ng-keyup="verifyEmail(signup.email, user_type_id)" type="email" class="form-control" name="email" ng-model="signup.email" placeholder="{{'email_address' | translate}}*" ng-pattern="/^[_a-zA-Z0-9]+(\.[_a-zA-Z0-9]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*(\.[a-zA-Z]{2,4})$/" required>
+                                </div>
+                                <span class="help-error" ng-show="emailExists && signup.email">{{'email_already_exist' | translate}}</span>
+                                <span class="help-error" ng-show="emailProviderExists && signup.email" ng-if="user_type_id == 4 || user_type_id == 9">{{'invalid_company_email_id' | translate}}</span>
+                                <span class="help-error" ng-show="signup_submitted && signupForm.email.$error.required">{{'please_enter_email_address' | translate}}</span>
+                                <span class="help-error" ng-show="signup_submitted && signupForm.email.$error.pattern">{{'please_enter_a_valid_email_address' | translate}}</span>
+                            </div>
+                            <div class="input-group" ng-if="OTPrequired">
+                                <div class="form-line">
+                                    <oi-select oi-options="country.country_name for country in all_countries track by country.country_id" placeholder="{{'select_country' | translate}}*" ng-model="signup.country" oi-select-options="{closeList: false, cleanModel: true}" name="country" ng-change="changeNumber()" required></oi-select>
+                                </div>
+                                <span class="help-error" ng-show="signup_submitted && signupForm.country.$error.required">{{'please_select_the_country' | translate}}</span>
+                            </div>
+                            <div class="input-group" ng-if="signup.country">
+                                <div class="form-line">
+                                    <input ng-disabled='loading || otp_sent' type="text" placeholder="{{'mobile_number' | translate}}*" ng-pattern="/^[0-9]{1,15}$/" class="form-control mobile-verify" ng-keyup="verifyMobile(signup.mobile)" id="tel-dc" name="tel" ng-model="signup.mobile" numbers-only required>
+                                    <span class="pre-value bold">({{signup.country.phonecode}})</span>
+                                    <button ng-if="otp_sent" type="button" class="btn btn-link bold append-btn" ng-click="changeNumber()">{{'change' | translate}}</button>
+                                </div>
+                                <span class="help-error" ng-show="mobileExists && signup.mobile">{{'mobile_number_already_exist' | translate}}</span>
+                                <span class="help-error" ng-show="signup_submitted && signupForm.tel.$pristine && signupForm.tel.$error.required">{{'please_enter_a_valid_mobile_number' | translate}}</span>
+                                <span class="help-error" ng-show="signup_submitted && signupForm.tel.$error.pattern">{{'this_mobile_number_format_is_not_recognized_please_check_the_number' | translate}}</span>
+                                <span ng-if="otp_verified" class="otp-verified">{{'otp_verified' | translate}}</span>
+
+                                <!--<span class="help-error" ng-show="submitted && signupForm.tel.$invalid && signupForm.tel.$touched">This phone number format is not recognized. Please check the country and number.</span>-->
+                            </div>
+
+                            <div class="input-group" ng-if="otp_sent && !otp_verified">
+                                <div class="form-line">
+                                    <input ng-disabled='loading' type="text" placeholder="{{'enter_otp_sent_to' | translate}}{{signup.mobile}}*" class="form-control" id="otp" name="otp" ng-model="signup.otp" ng-keyup="submitOTP(signup.otp)" required>
+                                    <button ng-if="otp_sent" type="button" class="btn btn-link bold append-btn" ng-click="resendOTP()" ng-disabled="loading">{{'resend' | translate}}</button>
+                                </div>
+                                <span class="help-error" ng-show="signup_submitted && signupForm.otp.$error.required">{{'please_enter_a_valid_otp' | translate}}</span>
+                                <span class="help-error" ng-show="otp_incorrect">{{'incorrect_otp' | translate}}</span>
+                            </div>
+                            <!-- Start without mobile otp -->
+                            <div ng-if="!OTPrequired">
+                                <div class="input-group">
+                                    <div class="form-line" ng-if="!landlineRequired">
+                                        <input ng-disabled='loading' type="text" placeholder="{{'mobile_number' | translate}}*" ng-pattern="/^[0-9]{1,15}$/" class="form-control" ng-keyup="verifyMobile(signup.mobile)" id="tel-number" name="mobile" ng-model="signup.mobile" numbers-only required>
+                                    </div>
+                                    <div class="form-line" ng-if="landlineRequired">
+                                        <input ng-disabled='loading' type="text" placeholder="{{'mobile_number' | translate}}" ng-pattern="/^[0-9]{1,15}$/" class="form-control" ng-keyup="verifyMobile(signup.mobile)" id="tel-number" name="mobile" ng-model="signup.mobile" numbers-only>
+                                    </div>
+                                    <span class="help-error" ng-show="mobileExists && signup.mobile">{{'mobile_number_already_exist' | translate}}</span>
+
+                                    <span class="help-error" ng-show="signup_submitted && signupForm.mobile.$pristine && signupForm.mobile.$error.required">{{'please_enter_a_valid_mobile_number' | translate}}</span>
+                                    <span class="help-error" ng-show="signup_submitted && signupForm.mobile.$error.pattern">{{'this_mobile_number_format_is_not_recognized_please_check_the_number' | translate}}</span>
+                                </div>
+                            </div>
+                            <!-- end without mobile otp -->
+
+                            <!-- Start landline -->
+                            <div class="input-group" ng-if="user_type_id == 4 || user_type_id == 5">
+                                <div class="form-line">
+                                    <input ng-disabled='loading' type="text" placeholder="{{'landline_number' | translate}}*" ng-pattern="/^[0-9]{1,15}$/" class="form-control" ng-keyup="verifyLandline(signup.landline)" id="tel-no" name="landline" ng-model="signup.landline" numbers-only required>
+                                </div>
+                                <span class="help-error" ng-show="landlineExists && signup.landline">{{'landline_number_already_exists' | translate}}</span>
+                                <span class="help-error" ng-show="signup_submitted && signupForm.landline.$error.required">{{'please_enter_a_valid_landline_number' | translate}}</span>
+                                <span class="help-error" ng-show="signup_submitted && signupForm.landline.$error.pattern">{{'this_landline_number_format_is_not_recognized_please_check_the_number' | translate}}</span>
+                            </div>
+                            <!-- end land line -->
+                            <div ng-if="signup_direct">
+                            <div ng-if="otp_verified || !OTPrequired">
+                                <div class="input-group">
+                                    <div class="form-line">
+                                        <input ng-disabled='loading' autocomplete="off" type="{{inputType}}" class="form-control form-control show-pass" ng-model="signup.password" name="password" minlength="6" 
+                                               placeholder="{{'password_6_or_more_characters' | translate}}*" required >
+                                               <i class="fa icon-right show-pass-icon cursor-pointer fa-eye-slash" ng-click="hideShowPassword()"  ng-if="inputType == 'password'"></i>
+                                        <i class="fa icon-right show-pass-icon cursor-pointer fa-eye active"  ng-click="hideShowPassword()"  ng-if="inputType == 'text'"></i>
+                                        <!-- <i class="fa icon-right show-pass-icon cursor-pointer fa-eye-slash"></i> -->
+                                    </div>
+                                    <span class="help-error" ng-show="signup_submitted && signupForm.password.$error.required">{{'please_enter_your_password' | translate}}</span>
+                                    <span class="help-error" ng-show="signup_submitted && signupForm.password.$error.minlength">{{'password_must_be_atleast_6_characters' | translate}}</span>
+                                </div>
+
+                                <div class="form-group margin-b-0 text-center">
+                                    <label class="terms">By signing up to create an account I accept to your <a href="terms-and-conditions" target="_blank"><strong>Terms & Conditions</strong></a> and <a href="privacy-policy"  target="_blank"><strong>Privacy Policy</strong></a></label>
+                                </div>
+                            </div>
+                          </div>
+                            <button ng-show="signup_direct" type="submit" class="btn btn-block waves-effect" ng-disabled="loading" ng-click="signup_submitted=true">
+                                <span ng-if="OTPrequired">{{otp_verified == true ?'SIGN UP':'CONTINUE'}}</span>
+                                <span ng-if="!OTPrequired">{{'sign_up' | translate}} </span><span ng-include="'dist/images/corp-land/but-arr.svg'" class="svg" /></button>
+                            </button>
+                            <button ng-show="!signup_direct" type="submit" class="btn btn-block btn-lg bg-purple waves-effect" ng-disabled="loading" ng-click="signup_submitted=true">
+                                {{signup_btn_text}}
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer border-none">
+                <div class="col-xs-12">
+                    <a ng-click="ShowSignIn(signup_id,signup_type)" class="goto-logs cursor-pointer pull-left" data-id="1">Existing User? Sign In</a>
+                    <!--<a ng-click="ShowForgotPass(signup_id,signup_type)" class="goto-logs cursor-pointer pull-right" data-id="3">Forgot Password?</a>-->
+                </div>
+            </div>
+        </div>
+    </div>                           
+</div>
+<!-- End SignUp -->
+
+<!-- Start SignIn -->
+<div class="modal" id="signin_modal" tabindex="-1" role="dialog" ng-controller="SigninCtrl">
+  <div class="modal-dialog" role="document" ng-cloak>
+    <div class="modal-content signup-popup">
+        <div class="modal-header no-border">
+            <button type="button" class="close" data-dismiss="modal" ng-click="closeThisDialog('Cancel')">&times;</button>
+        </div>
+        <div class="modal-body">
+            <!-- <div class="col-xs-12 col-sm-6 socialLogin">
+                <button fb-login type="button"><img src="dist/images/corp-land/fb.png" /></button>
+                <button g-login type="button"><img src="dist/images/corp-land/google.png" /></button>
+                <button linked-in type="button"><img src="dist/images/corp-land/linkedin.png" /></button>
+            </div> -->
+            <div class="col-xs-12 col-sm-6 socialLogin hidden-xs">
+              <div class="d-none">
+                <a href="#" class="fb btn">
+                  <i class="fa fa-facebook fa-fw"></i> <span>{{'login_with_facebook' | translate}}</span>
+                 </a>
+                <a href="#" class="linkedin btn">
+                  <i class="fa fa-linkedin fa-fw"></i> <span>{{'login_with_linkedin' | translate}}</span>
+                </a>
+                <a href="#" class="google btn">
+                  <i class="fa fa-google fa-fw"></i> <span>{{'login_with_google+' | translate}}</span>
+                </a>
+              </div>
+              <p class="sloginTxt hide">{{'dont_have_an_account_yet' | translate}}</p>
+                <a ng-if="signup_direct" href="signup" class="account" data-id="1">{{'create_an_account' | translate}}</a>
+            </div>
+
+            <div class="omb_row-sm-offset-3 omb_loginOr clearfix d-none hidden-xs">
+              <div class="col-xs-12 col-sm-6">
+                <hr class="omb_hrOr">
+                <span class="omb_spanOr">{{'or' | translate}}</span>
+              </div>
+            </div>
+
+           
+            <div class="col-xs-12 col-sm-6 login-box no-padd">
+                <form accessible-form  id="sign_in" method="POST" name="signinForm" ng-submit="signinForm.$valid && submitSigninForm()" novalidate autocomplete="off">
+                    <div class="input-group">
+                        <div class="form-line">
+                            <input type="text" ng-disabled="loaded" class="form-control" name="username" ng-model="signin.username" placeholder="{{'email_or_mobile' | translate}}" autofocus="" required>
+                        </div>
+                        <span class="help-error" ng-show="submitted && signinForm.username.$error.required">{{'enter_valid_email_or_mobile_number' | translate}}</span>
+                        </div>
+                    <div class="input-group">
+                        <div class="form-line">
+                            <input type="{{inputType}}" ng-disabled="loaded" class="form-control show-pass" name="password" ng-model="signin.password" placeholder="{{'password' | translate}}" required>
+                            <i class="fa icon-right show-pass-icon cursor-pointer fa-eye-slash" ng-click="hideShowPassword()"  ng-if="inputType == 'password'"></i>
+                                        <i class="fa icon-right show-pass-icon cursor-pointer fa-eye active"  ng-click="hideShowPassword()"  ng-if="inputType == 'text'"></i>
+                            <span class="help-error" ng-show="submitted && signinForm.password.$error.required">{{'enter_your_password' | translate}}</span>
+
+                            <div class="rememberme">
+                              <input type="checkbox" ng-model="signin.remember" id="remember"><label for="remember" class="text">{{'remember_me' | translate}}</label>
+                            </div>
+                            <a ng-click="ShowForgotPass(signup_id,signup_type)" class="goto-logs cursor-pointer fixed-pull-right" data-id="3">{{'forgot_password' | translate}}</a>
+                        </div>
+                    </div>
+
+                    
+                    <button ng-click="submitted=true" class="btn btn-block waves-effect" type="submit" ng-disabled="loaded">
+                        {{'login_now' | translate}} <img src="dist/images/corp-land/but-arr.svg" class="svg" />
+                    </button>
+                </form>
+                <a ng-if="signup_direct" href="signup" class="goto-logs cursor-pointer pull-left ng-scope visible-xs" data-id="1">{{'create_an_account_in_our_app' | translate}}</a>
+            </div>
+        </div>
+    </div>
+  </div>  
+</div>
+<!-- End SignIn -->
+
+<!-- Start Forgot Password -->
+<div class="modal" id="forgot_password_modal" tabindex="-1" role="dialog" ng-controller="ForgotPassCtrl">
+  <div class="modal-dialog modal-medium" role="document" ng-cloak>
+    <div class="modal-content signup-popup">
+      <div class="modal-header">
+        <h5 class="modal-title">{{'reset_your_password' | translate}}</h5>
+        <button type="button" class="close" data-dismiss="modal" ng-click="closeThisDialog('Cancel')">&times;</button>
+      </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-12">
+                <form accessible-form  method="POST" name="forgotForm" ng-submit="forgotForm.$valid && submitForgotPassForm()" novalidate autocomplete="off">
+              <div class="input-group">
+                <div class="form-line">
+                  <input type="text" class="form-control" name="email" ng-model="email" placeholder="{{'enter_your_email' | translate}}" required="" autofocus="" aria-required="true" ng-pattern="/^[_a-zA-Z0-9]+(\.[_a-zA-Z0-9]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*(\.[a-zA-Z]{2,4})$/">
+                </div>
+                <!--<span class="help-error" ng-show="emailNotExists">Email do not exist</span>-->
+                <span class="help-error m-help-error" ng-show="submitted && forgotForm.email.$error.required">{{'please_enter_a_email_address' | translate}}</span>
+                <span class="help-error m-help-error" ng-show="submitted && forgotForm.email.$error.pattern">{{'please_enter_a_valid_email_address' | translate}}</span>
+              </div>
+              <div class="col-12-4 text-center">
+                <button ng-click="submitted=true" class="btn btn-block waves-effect" type="submit" ng-disabled="loaded">{{'reset_password' | translate}} <img src="dist/images/corp-land/but-arr.svg" class="svg" /></button>
+              </div>
+              <div class="row">
+                
+              </div>
+            </form>
+              </div>
+              
+          </div>
+        </div>
+        <div class="modal-footer border-none">
+          <div class="col-xs-12">
+              <a ng-click="ShowSignIn(signup_type,signup_type)" class="goto-logs cursor-pointer pull-left" data-id="1">{{'existing_user_sign_in' | translate}}</a>
+              <a ng-if="signup_direct" href="signup" class="goto-logs cursor-pointer pull-right" data-id="1">{{'new_user_sign_up' | translate}}</a>
+              <a ng-if="!signup_direct" ng-click="QuickApply(signup_id,signup_type)" class="goto-logs cursor-pointer pull-right" data-id="1">{{'new_user_sign_up' | translate}}</a>
+            </div>
+        </div>
+    </div>
+  </div>  
+</div>
+<!-- End Forgot Password -->
+
+<!-- Start Quick Job Apply SignUp -->
+<div class="modal" id="quick_apply_modal" tabindex="-1" role="dialog" ng-controller="QuickApplyCtrl">
+  <div class="modal-dialog modal-medium" role="document" ng-cloak>
+      <div class="modal-content signup-popup">
+          <div class="modal-header">
+            <h4 class="modal-title">
+                <span>{{'you_are_applying_for_job' | translate}}</span>
+            </h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+              <div class="row">
+                  <div class="col-xs-12">
+                        <form accessible-form  id="quick_apply" method="POST" name="signupForm" ng-submit="signupForm.$valid &&!emailExists &&!mobileExists && submitSignupForm()" novalidate>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                </span>
+                                <div class="form-line">
+                                    <oi-select oi-options="type as type.user_type for type in userTypes track by type.user_type_id" placeholder="- {{'select_user_type' | translate}}" ng-model="signup.userType" oi-select-options="{closeList: false,cleanModel: true}" name="userType"  required></oi-select>
+                                </div>
+                                <span class="help-error" ng-show="submitted && signupForm.userType.$error.required">{{'please_select_a_user_type' | translate}}</span>
+                            </div>
+
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                </span>
+                                <div class="form-line">
+                                    <input ng-disabled='loading' autocomplete="off" type="name" class="form-control" name="firstname" ng-model="signup.firstname" placeholder="{{'name' | translate}}*" ng-pattern="/^[a-zA-Z]*$/" required>
+                                </div>
+                                <span class="help-error" ng-show="submitted && signupForm.firstname.$error.required">{{'please_enter_your_name' | translate}}</span>
+                                <span class="help-error" ng-show="submitted && signupForm.firstname.$error.pattern">{{'please_use_only_letters' | translate}}(a-z or A-Z)</span>
+                            </div>
+
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                </span>
+                                <div class="form-line">
+                                    <input ng-disabled='loading' autocomplete="off" ng-keyup="verifyEmail(signup.email, user_type_id)" type="email" class="form-control" name="email" ng-model="signup.email" placeholder="{{'email_address' | translate}}*" ng-pattern="/^[_a-zA-Z0-9]+(\.[_a-zA-Z0-9]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*(\.[a-zA-Z]{2,4})$/" required>
+                                </div>
+                                <span class="help-error" ng-show="emailExists && signup.email">{{'email_already_exists' | translate}}</span>
+                                <span class="help-error" ng-show="emailProviderExists && signup.email" ng-if="user_type_id == 4 || user_type_id == 9">{{'invalid_company_email' | translate}}</span>
+                                <span class="help-error" ng-show="submitted && signupForm.email.$error.required">{{'please_enter_email_address' | translate}}</span>
+                                <span class="help-error" ng-show="submitted && signupForm.email.$error.pattern">{{'please_enter_a_valid_email_address' | translate}}</span>
+                            </div> 
+ 
+                         
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-mobile" aria-hidden="true"></i>
+                                </span>
+                                <div class="form-line">
+                                    <input ng-disabled='loading' type="text" placeholder="{{'mobile_number' | translate}}*" ng-pattern="/^[0-9]{1,15}$/" class="form-control" ng-keyup="verifyMobile(signup.mobile)" id="tel-numbers" name="mobile" ng-model="signup.mobile" numbers-only required>
+                                </div>
+                                <span class="help-error" ng-show="mobileExists && signup.mobile">{{'mobile_number_already_exists' | translate}}</span>
+
+                                <span class="help-error" ng-show="submitted && signupForm.mobile.$pristine && signupForm.mobile.$error.required">{{'please_enter_a_valid_mobile_number' | translate}}</span>
+                                <span class="help-error" ng-show="submitted && signupForm.mobile.$error.pattern">{{'this_mobile_number_format_is_not_recognized_please_check_the_number' | translate}}</span>
+                            </div>
+
+                            <div class="input-group">
+                              <div class="form-group">
+                                <div class="form-group form-float">
+                                  <div class="upload-file">
+                                    <span data-ng-if="signup.file">{{signup.file}}</span>
+                                    <span data-ng-if="!signup.file"><strong>{{'upload_cv' | translate}}</strong> {{'upload_or_drag_and_drop_your_cv_here' | translate}}*.</span>
+                                  </div>
+                                  <input type="file" name="cv_file" id="cv_file" data-file="signup.file" class="form-control video-file hidden-upload-file" accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/pdf"  required>
+                                  <div class="help-info">[ {{'supported_formats' | translate}} : DOC, DOCX or PDF]</div>
+                                  <span class="help-error" ng-show="submitted && signupForm.cv_file.$error.required">{{'please_upload_cv_file' | translate}}</span>
+                                </div>
+                              </div>
+                            
+                            </div>
+                           
+                            <button type="submit" class="btn btn-block btn-lg bg-purple waves-effect" ng-disabled="loading" ng-click="submitted=true">
+                                {{'apply' | translate}}
+                            </button>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>                           
+</div>
+<!-- End Quick Job Apply SignUp -->
+
+<!-- Start Job Weightage Modal -->
+<div class="modal tc_pop_up" id="weightahe_chart_modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title" id="defaultModalLabel">{{'job_weightage_match_chart' | translate}}</h4> 
+      </div>
+
+      <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-12">
+              <!--<canvas id="myChart" width="350" height="350"></canvas>-->
+              <div id="myChart" style="height: 400px"></div>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Job Weightage Modal -->
+
+  <!-- Start common chart -->
+  <div class="modal" id="common_chart_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-capitalize">{{chartTitleName}} {{'skills_chart' | translate}}</h5>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div id="common_chart"></div>
+            <div class="row" ng-if="ChartButton">
+              <div class="col-xs-12">
+                <a target="_blank" href="{{ChartButtonUrl}}" class="btn btn-primary">{{ChartButtonText}}</a>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div> 
+  <!-- End common chart -->
+
+  <!-- start trial feedback remiders -->
+
+  <div class="modal" id="feedback-7" tabindex="-1" role="dialog" ng-controller="SevenFeedbackCtrl" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog" role="dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                    <h4 class="modal-title">{{'feedback' | translate}}</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="popup-container">
+                        <div class="popup-body">
+
+                          <form accessible-form  class="form s_o_f autocomplete_form"  name="RatingForm" ng-submit="RatingForm.$valid && submitForm()"  novalidate>
+
+                           <div class="feedback-bor">                             
+                            <div class="form-line">
+                              <p>{{'please_rate_you_overall_experience_with_training_calendar_on_a_scale_of_1_to_10' | translate}}</p>
+                              <label class="feedback-check" ng-repeat="rating in [1,2,3,4,5,6,7,8,9,10]">
+                                <input type="radio" name="feedback_rating" ng-model="feedback.rating" value="{{rating}}" required>
+                                <span class="checkmark">{{rating}}</span>
+                              </label>
+
+                                <div class="cleard"></div>
+                                 <div class="wdth400">
+                                   <p class="pull-left">{{'poor' | translate}}</p>
+                                   <p class="pull-right">{{'very_good' | translate}}</p>
+                                 </div>
+                            </div>
+
+                            <p><span class="help-error" ng-show="submitted  && RatingForm.feedback_rating.$error.required">{{'please_select_the_rating' | translate}}</span></p>
+                            <div class="cleard"></div>
+                            <br>
+                            <div class="row" ng-if="feedback.rating">
+                              <div class="col-sm-12 col-md-12 form-col">
+                                <div class="form-group">
+                                  <div class="form-line form-float">
+                                    <p class="text">{{'thank_you_for_rating_us_what_did_you_like_about_training_calendar' | translate}}<span class="col-red">*</span></p>
+                                    <input type="text" class="form-control" placeholder="" name="comment" ng-model="feedback.comments" required>
+                                  </div>
+                                   <span class="help-error" ng-show="submitted  && RatingForm.comment.$error.required">{{'please_give_your_comments' | translate}}</span>
+
+                                </div>
+                              </div>
+
+                              <div class="col-md-2 form-col">
+                               <button class="btn bg-purple waves-effect pull-right" type="submit" ng-click="submitted = true"> {{'submit' | translate}} </button>
+                              </div>
+                            </div>                          
+                          </div>
+
+                          </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="feedback-12" tabindex="-1" role="dialog" ng-controller="RemidersCtrl" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog" role="dialog">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <div class="popup-container">
+                        <div class="popup-body">
+                           <form accessible-form  class="form s_o_f autocomplete_form"  name="ReminderForm" ng-submit="ReminderForm.$valid && submitForm()"  novalidate>
+                           <div class="feedback-bor">
+                              <div class="clearfix">
+                                <p>{{'your_trail_access_ends_in_2days_would_you_like_our_customer_success_team_to_contact_you_to_get_premium_access' | translate}}</p>
+                                <div class="radio-button">
+                                  <input type="radio" name="expire_mode" id="expire_mode1" ng-model="feedback.want_premium" value="Y" class="with-gap radio-col-green" required/>
+                                  <label for="expire_mode1">{{'yes' | translate}}</label>
+                                  <input type="radio"  name="expire_mode"  id="expire_mode2" ng-model="feedback.want_premium" value="N" class="with-gap radio-col-green" required/>
+                                  <label for="expire_mode2">{{'no' | translate}}</label>
+                                </div>
+                                <span class="help-error" ng-show="submitted  && ReminderForm.expire_mode.$error.required">{{'please_select_one' | translate}}</span>
+                              </div>
+
+                              <br>
+
+                              <div class="row" ng-if="feedback.want_premium == 'N'">
+                                <div class="col-sm-12 col-md-12 form-col">
+                                  <div class="form-group">
+                                    <div class="form-line form-float">
+                                      <p class="text">{{'its_sad_to_see_you_not_continue_with_us_please_let_us_know_why_you_are_not_going_ahead_with_us_at_this_stage' | translate}}</p>
+                                       <input type="text" class="form-control" placeholder=""  name="comment" ng-model="feedback.comments" required>
+                                    </div>
+                                     <span class="help-error" ng-show="submitted  && ReminderForm.comment.$error.required">{{'please_give_your_comments' | translate}}</span>
+                                   </div>
+                                </div>
+                              </div>
+                              <div class="row" ng-if="feedback.want_premium == 'Y'">
+                                <div class="col-sm-12 col-md-12 form-col">
+                                  <div class="form-group">
+                                    <div class="form-line form-float">
+                                      <p class="text">{{'thank_you_for_choosing_training_calendar_we_are_glad_to_have_you_on_board_our_customer_success_team_will_get_in_touch_with_you_shortly' | translate}}</p>
+                                    </div>
+                                   </div>
+                                </div>
+                              </div>
+                               <div class="col-md-2 form-col">
+                               <button class="btn bg-purple waves-effect pull-right" type="submit" ng-click="submitted = true "> {{'submit' | translate}} </button>
+                              </div>
+                              <div class="cleard"></div>
+                            </div>
+                        
+                        </form>
+                      </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <!-- End trial feedback remiders -->
+
+    <div class="overlay">
+    </div>
+    <div class="loading-overlay">
+      <div class="loader">
+      </div>
+      <!-- <p class="loading-text">25 Employees uploaded successfully</p> -->
+    </div>
+
+        <!-- start Loader -->
+    <div class="card loading dashboard" style="display: none;">
+      <div class="body">
+        <div class="text-center p-t-100 p-b-100">
+          <div class="preloader pl-size-sm">
+            <div class="spinner-layer pl-purple">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div>
+              <div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end loader -->
+    <!-- Start page content -->
+
+    
+
+  <!--==========================
+    Top Bar
+  ============================-->
+  <section id="topbar" class="d-lg-block">
+    <div class="container clearfix">
+      <div class="col-md-5 col-sm-3 col-xs-8 no-pad mob-lang">
+        <div class="log out languagepart" ng-cloak>
+          <ul class="nav navbar-nav">
+            <li class="pull-left">
+              <a class="my-account cursor-pointer" data-toggle="dropdown" aria-haspopup="true">
+                <span> Languages - {{languageName == 'en' ? 'English' :(languageName == 'ta' ? 'Tamil' :(languageName == 'ar' ? 'Arabic' : 'English'))}}<i class="fa fa-caret-down"></i></span>
+              </a>
+              <div class="dropdown-menu nav-top-user-dropdown">
+                <div class="log_top_arrow">
+                  <i class="material-icons">arrow_drop_up</i></div>
+                <div class="row log-body">
+                  <div class="col-xs-12">
+                    <ul class="f16"> 
+                      <li ng-click="changeLanguage('en',true)" class="flag eg"><span>{{'english' | translate}}</span></li>
+                      <!-- <li ng-click="changeLanguage('ta',true)" class="flag in"><span>{{'tamil' | translate}}</span></li> -->
+                      <li ng-click="changeLanguage('ar',true)" class="flag ae"><span>{{'arabic' | translate}}</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-7 col-sm-9 col-xs-12 no-padd">
+        <div class="signin">
+
+          <div class="tc-search-btn col-lg-7 col-md-6 col-sm-7 col-xs-12 no-padd">
+            <div class="inner-addon right-addon">
+              <i class="glyphicon glyphicon-search"></i>
+              <!-- <input type="text" class="form-control" placeholder="Search" ng-model="noSearch" /> -->
+              <div class="open-search" ng-click="openSearch()">{{'search_here' | translate}}</div>
+            </div>
+           </div>
+
+            <div class="sign-circle col-lg-3 col-md-3 col-sm-4 col-xs-6" ng-cloak>
+                <div class=" in" ng-if="!userData.authenticated">
+                  <a class="cursor-pointer" ng-click="ShowSignIn()">{{'sign_in' | translate}}</a> /
+                  <a ng-class="{active: activetab=='/signup/'}" href="signup">{{'sign_up' | translate}}</a>
+              </div>
+
+                <div class="log out mob-myact" ng-if="userData.authenticated" ng-cloak>
+        <ul class="nav navbar-nav">
+          <li class="myactc-search-btn">
+            <a class="my-account cursor-pointer" data-toggle="dropdown" aria-haspopup="true">
+              <span>{{'my_account' | translate}}<i class="fa fa-caret-down"></i></span>
+            </a>
+            <div class="dropdown-menu nav-top-user-dropdown">
+              <div class="log_top_arrow">
+                <i class="fa fa-caret-up material-icons" aria-hidden="true"></i></div>
+              <div class="row log-header">
+                <p>{{'hi' | translate}} 
+                  <span ng-if="userData.authenticated && userData.user_type_id == '2' || userData.user_type_id=='3' || userData.user_type_id=='1'">{{userData.firstname}}!</span>
+                <span ng-if="userData.authenticated && userData.user_type_id == '4' || userData.user_type_id=='5' || userData.user_type_id=='6'">{{userData.company_name}}!</span>
+                </p>
+                
+              </div>
+              <div class="row log-body">
+                <div class="col-xs-12 p-0">
+                  <ul ng-if="userData.user_type_id != 1"> 
+                    <li ng-if="userData.user_type_id != 4"><a href="user/dashboard"><span>{{'dashboard' | translate}}</span></a></li>
+                    <li ng-if="userData.user_type_id == 4"><a href="user/corporate-dashboard"><span>{{'dashboard' | translate}}</span></a></li>
+                    <li><a href="user/profile"><span>{{'my_profile' | translate}}</span></a></li>
+                    <li><a href="user/wishlist"><span>{{'my_wishlist' | translate}}</span></a></li>
+                    <li><a href="cart"><span>{{'my_cart' | translate}}</span></a></li>
+                    <li><a class="cursor-pointer" ng-click="signOut()"><span>{{'logout' | translate}}</span></a></li>
+                  </ul>
+                  <ul ng-if="userData.user_type_id == 1"> 
+                    <li><a href="user/dashboard"><span>{{'dashboard' | translate}}</span></a></li>
+                    <li><a class="cursor-pointer" ng-click="signOut()"><span>{{'logout' | translate}}</span></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row log-footer">
+                <h5>{{'logged_as' | translate}} <span>{{userData.user_type | uppercase}} </span><span ng-if="userData.isAdmin">(ADMIN)</span>
+                </h5>
+                <h7 ng-if="userData.isAdmin">{{userData.adminName}}</h7>
+              </div>
+            </div>
+          </li>
+        </ul>
+        
+        <!-- lang ends -->
+    </div>
+    <div class="cleard"></div>
+            </div>
+
+        <div class="col-lg-1 col-md-2 col-sm-1 col-xs-1 pull-right" ng-if="userData.authenticated">
+          <div class="log out" ng-cloak>
+            <ul class="nav navbar-nav navbar-right">
+          
+             <li class="dropdown notification-view">
+              <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button">
+               <i class="fa fa-bell" aria-hidden="true"></i>
+               <span class="label-count" ng-class="{active : NotificationsCount > 0}" ng-cloak ng-if="NotificationsCount > 0">{{NotificationsCount}}</span>
+              </a>
+              <ul class="dropdown-menu">
+               <li class="header"> <!--  url(dist/images/notification_bg.jpg) -->
+                 <div class="tc-dropdown-header" style="background:#904d97; background-size: cover;">
+                    <span class="tc-dropdown-header-title" ng-if="NotificationsCount > 0">{{NotificationsCount}}</span>
+                    <span class="tc-dropdown-header-subtitle">{{NotificationsCount > 0 ? 'recent_notifications' : 'notifications_not_found'| translate}}</span>
+                  </div>
+               </li>
+               <li class="body">
+                <div class="tc-list-timeline-items" ng-if="NotificationsCount">
+                    <div class="tc-list-timeline-item" ng-repeat="notification in RecentNotifications">
+                      <a href="{{notification.url}}" ng-class="notification.url ? '' : 'pointer-disabled'">
+                        <span class="tc-list-timeline-badge tc-list-timeline-badge-state-success"></span>
+                        <span class="tc-list-timeline-text text-capitalize">{{notification.title}}</span>
+                        <!-- <span class="tc-list-timeline-time">{{notification.sent_at}}</span> -->
+                      </a>
+                     </div>
+                </div>
+               </li>
+               <li class="footer">
+                <a href="user/notifications">{{NotificationsCount > 0 ? 'view_all_notifications' : 'view_previous_notifications' | translate}}</a>
+               </li>
+              </ul>
+             </li>
+             
+            </ul>
+          </div>
+        </div>
+
+
+        </div>
+      </div>
+  </div>
+  </section>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header" ng-cloak>
+    <div class="container">
+      <div id="logo" class="pull-left">
+        <a href="home"><img src="dist/images/logo.png" alt="logo" class="img-responsive" /></a>
+      </div>
+
+
+     
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-has-children">
+              <a class="cursor-pointer" ng-class="{'active-tab': activetab == '/courses/' || activetab == '/specializations/'}">{{'courses' | translate}}</a>
+              <ul>
+                  <li><a href="courses" ng-class="{'active': activetab == '/courses/'}">{{'all_courses' | translate}}</a></li>
+                  <li><a href="specializations" ng-class="{'active': activetab == '/specializations/'}">{{'all_categories' | translate}}</a></li>
+              </ul>
+          </li>
+          <li><a href="executive-education" ng-class="{'active-tab': activetab == '/executive-education/'}">{{'executive_education' | translate}}</a></li>
+        <li><a href="conferences" ng-class="{'active-tab': activetab == '/conferences/'}">{{'conferences' | translate}}</a></li>
+        <li><a href="rfps" ng-class="{'active-tab': activetab == '/rfps/'}">{{'rfps' | translate}}</a></li>
+        <!-- <li class="menu-has-children"><a href="#" ng-class="{'active-tab': activetab == '/trainer-vacancies' ||  activetab == '/jobs-map/' || activetab == '/jobs-map/campus'}">Jobs</a>
+          <ul>
+              <li><a href="trainer-vacancies/map" ng-class="{'active': activetab == '/trainer-vacancies'}">Trainer Jobs</a></li>
+              <li><a href="jobs-map" ng-class="{'active': activetab == '/jobs-map/'}">Professional Jobs</a></li>
+              <li><a href="jobs-map/campus" ng-class="{'active': activetab == '/jobs-map/campus'}">Campus Jobs</a></li>
+          </ul>
+        </li> -->
+        <li><a href="e-learning-courses" ng-class="{'active-tab': activetab == '/e-learning-courses/'}">{{'e_learning' | translate}}</a></li>
+        <li><a href="blogs" ng-class="{'active-tab': activetab == '/blogs/'}" style="display: none;">{{'blog' | translate}}</a></li>
+        <!-- <li><a  ng-click="openSlideSearch()">SlideShare</a></li> -->
+
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+
+<div class="spinner-wrap" ng-hide="appLoaded"><div class="spinner"></div></div>
+
+<!-- ng-class="userData.user_type_id == 4 ? 'new_leftment' : '' " -->
+  <div class="view-section new_leftment" ng-style="windowHeightStyle">
+    <section class="dashboard-content" ng-if="requireLogin" ng-cloak>
+      <div class="container-fluid">
+        <div class="dashboard-left corporatemenu">
+          <div ng-include src="'ngviews/leftmenu/professional_leftmenu.html'" ng-if="userData.user_type_id == 2 &&  menuType != 'internal'" class="rtl-leftmenu"></div>
+          <div ng-include src="'ngviews/leftmenu/internal_leftmenu_employee.html'" ng-if="userData.user_type_id == 2 && menuType == 'internal'" class="rtl-leftmenu"></div>
+
+          <div ng-include src="'ngviews/leftmenu/trainer_leftmenu.html'" ng-if="userData.user_type_id == 3" class="rtl-leftmenu"></div>
+
+          <!-- <div ng-include src="'ngviews/leftmenu/corporate_leftmenu.html'" ng-if="userData.user_type_id == 4 &&  menuType != 'internal' && plan_active"></div>
+          <div ng-include src="'ngviews/leftmenu/internal_leftmenu_corporate.html'" ng-if="userData.user_type_id == 4 && menuType == 'internal'"></div> -->
+          <div ng-include src="'ngviews/leftmenu/corporate_leftmenu.html'" ng-if="userData.user_type_id == 4 && !otherMenu" class="rtl-leftmenu"></div>
+          <div ng-include src="'ngviews/leftmenu/internal_leftmenu_corporate.html'" ng-if="userData.user_type_id == 4 && isILmenu" class="rtl-leftmenu"></div>
+          <div ng-include src="'ngviews/leftmenu/recruitment_leftmenu.html'" ng-if="userData.user_type_id == 4 && isRecMenu" class="rtl-leftmenu"></div>
+            <div ng-include src="'ngviews/leftmenu/jobscreen_leftmenu.html'" ng-if="userData.user_type_id == 4 && isJobscreenMenu" class="rtl-leftmenu"></div>
+            <div ng-include src="'ngviews/leftmenu/contact_candidate_leftmenu.html'" ng-if="userData.user_type_id == 4 && isContCandMenu" class="rtl-leftmenu"></div>
+
+          <div ng-include src="'ngviews/leftmenu/feedback_leftmenu_corporate.html'" ng-if="userData.user_type_id == 4 && isFBmenu" class="rtl-leftmenu"></div>
+
+          <div ng-include src="'ngviews/leftmenu/provider_leftmenu.html'" ng-if="userData.user_type_id == 5" class="rtl-leftmenu"></div>
+          <div ng-include src="'ngviews/leftmenu/executive_leftmenu.html'" ng-if="userData.user_type_id == 6" class="rtl-leftmenu"></div>
+          <div ng-include src="'ngviews/leftmenu/student_leftmenu.html'" ng-if="userData.user_type_id == 8" class="rtl-leftmenu"></div>
+          <div ng-include src="'ngviews/leftmenu/recruiter_leftmenu.html'" ng-if="userData.user_type_id == 9" class="rtl-leftmenu"></div>
+          <div ng-include src="'ngviews/leftmenu/university_leftmenu.html'" ng-if="userData.user_type_id == 10" class="rtl-leftmenu"></div>
+          <div ng-include src="'ngviews/leftmenu/admin_leftmenu.html'" ng-if="userData.user_type_id == 1" class="rtl-leftmenu"></div>
+        </div>
+        <!--ng-include="'individual_leftmenu.html'"-->
+        <div class="dashboard-right inactive"><ng-view></ng-view></div>
+      </div>
+    </section>
+    <section ng-if="!requireLogin">
+      <ng-view></ng-view>
+    </section>
+  </div>
+
+
+
+    <footer id="footer">
+        <div class="container">
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <div class="footer-logo">
+                   <div class="footer-social">
+                    <a href="home"><img src="dist/images/logo-white.png" class="main-logo"/></a>
+                    <div class="social-icon">
+                      <div class="social-wrap">
+              <a href="https://in.linkedin.com/company/trainingcalendar" target="_blanks" title="LinkedIn" class="btn bg-linkedin hover-white btn-circle waves-effect waves-circle waves-float">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.facebook.com/traincalendar/" target="_blanks" title="Facebook" class="btn bg-facebook hover-white btn-circle waves-effect waves-circle waves-float">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <!-- <div tweet="asdasdad" tweet-url="https://www.google.com"></div> -->
+
+              <a href="https://www.twitter.com/trainingcal/" target="_blanks" title="Twitter" class="btn bg-twitter hover-white btn-circle waves-effect waves-circle waves-float">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.instagram.com/training_calendar/" target="_blanks" title="Instagram" class="btn bg-instagram hover-white btn-circle waves-effect waves-circle waves-float">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
+                    </div>
+
+                   </div>
+                    <p>
+                      <a href="https://www.forbesmiddleeast.com/en/black-cube-solutions-machine-learning-and-artificial-intelligence/" target="_blank">
+                        <img src="dist/images/new_images/forbes.png"/>
+                      </a>
+                    </p>
+
+                </div>
+            </div>
+            <div class="col-md-8 col-sm-12 col-xs-12 footer-link">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <h3 class="footer-sub-header">{{'quick_links' | translate}}</h3>
+                    <ul>
+                        <li><a href="about-us">{{'about_us' | translate}}</a></li>
+                        <li><a href="faq">{{'faqs' | translate}}</a></li>
+                        <li><a href="#" ng-click="ShowEnquiryForm('Payment & Financial Issues', 'payment')">{{'payment_other_financial_issues' | translate}}</a></li>
+                        <li><a href="#"  ng-click="ShowEnquiryForm('Technical Issues', 'technical')">{{'technical_other_issues' | translate}}</a></li>
+                        <li><a href="contact-us">{{'contact_us' | translate}}</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <h3 class="footer-sub-header">{{'our_policies' | translate}}</h3>
+                    <ul>
+                        <li><a href="privacy-policy">{{'privacy_policy' | translate}}</a></li>
+                        <li><a href="terms-of-service">{{'terms_of_service' | translate}}</a></li>
+                        <li><a href="terms-and-conditions">{{'terms_and_conditions' | translate}}</a></li>
+                        <li><a href="data-processing-agreement">{{'data_processing_agreement_dpa' | translate}}</a></li>
+                        <!-- <li><a href="#" ng-click="Day_7Feedback()">Day 7 Feedback</a></li>
+                        <li><a href="#" ng-click="Day_12Feedback()">Day 12 Reminder</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="tc-copyright"><p>{{'copyright' | translate}} &copy; 2018. {{'training_calendar' | translate}}.</p></div>
+
+    </footer>
+    <div compile="CookieePopup"></div>
+    <!-- End page Content -->
+
+  <script src="dist/js/bundle.js" ></script>
+  <!-- <script src="dist/js/templates.js" ></script> -->
+  <!-- <script src="assets/js/71-ionic-range-slider.js"></script> -->
+  <!-- <script src="dist/js/fixed-table.js"></script> -->
+  <script src="dist/js/vendor.min.js" ></script>
+  <script src="dist/js/controllers.min.js" ></script>
+
+
+      <!-- Device detector -->
+      <!-- <script type="text/javascript" src="assets/js/88-ng-device-detector.min.js"></script>
+      <script type="text/javascript" src="assets/js/89-re-tree.min.js"></script> -->
+
+      
+<!--   <script src="node_modules/angular-aria/angular-aria.js"></script> 
+  <script src="node_modules/angular-animate/angular-animate.js"></script> 
+  <script src="node_modules/angular-messages/angular-messages.js"></script> 
+  <script src="node_modules/angular-material/angular-material.js"></script> -->
+  <!-- <script src="assets/js/controllers.js" ></script> -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script> -->
+  <!-- <script src="https://cdn.ckeditor.com/4.9.2/standard/ckeditor.js"></script> -->
+  <script src="https://maps.google.com/maps/api/js?libraries=placeses,visualization,drawing,geometry,places&key=AIzaSyAO7A1Jg0saIGy82TMnk3AqfUjvxQ5uE98"></script>
+
+    <script type="text/ng-template" id="detail.html">
+        <form name="myForm">
+          <div class="control-group" ng-class="{error: myForm.name.$invalid}">
+            <label>{{'name' | translate}}</label>
+            <input type="text" name="name" ng-model="project.name" required>
+            <span ng-show="myForm.name.$error.required" class="help-inline">
+                {{'required' | translate}}</span>
+          </div>
+        
+          <div class="control-group" ng-class="{error: myForm.site.$invalid}">
+            <label>{{'website' | translate}}</label>
+            <input type="url" name="site" ng-model="project.site" required>
+            <span ng-show="myForm.site.$error.required" class="help-inline">
+                {{'required' | translate}}</span>
+            <span ng-show="myForm.site.$error.url" class="help-inline">
+                {{'not_a_url' | translate}}</span>
+          </div>
+        
+          <label>{{'description' | translate}}</label>
+          <textarea name="description" ng-model="project.description"></textarea>
+        
+          <br>
+          <a href="#/list" class="btn">{{'cancel' | translate}}</a>
+          <button ng-click="save()" ng-disabled="isClean() || myForm.$invalid"
+                  class="btn btn-primary">{{'save' | translate}}</button>
+          <button ng-click="destroy()"
+                  ng-show="project._id" class="btn btn-danger">{{'delete' | translate}}</button>
+        </form>
+      </script>
+<!-- 
+      <script>(function(t,e,s,n){var o,a,c;t.SMCX=t.SMCX||[],e.getElementById(n)||(o=e.getElementsByTagName(s),a=o[o.length-1],c=e.createElement(s),c.type="text/javascript",c.async=!0,c.id=n,c.src=["https:"===location.protocol?"https://":"http://","widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgd_2Bnex51b1b2jCZWBQtfTcaMEG0pG6_2BINqGOh76DG6TQ6.js"].join(""),a.parentNode.insertBefore(c,a))})(window,document,"script","smcx-sdk");</script><a style="font: 12px Helvetica, sans-serif; color: #999; text-decoration: none;" href=https://www.surveymonkey.com> Create your own user feedback survey </a> -->
+      
+      <!--Start of Tawk.to Script-->
+<!-- <script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5b83a6c7afc2c34e96e7ede6/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script> -->
+<!--End of Tawk.to Script-->
+  <!--Start of Zendesk Chat Script-->
+<!--   <script type="text/javascript">
+      window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+          d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+      _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+          $.src="https://v2.zopim.com/?5xD1nEWEsRrcMWH2ptFJ6fyVpGKZVSAS";z.t=+new Date;$.
+              type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+  </script> -->
+  <!--End of Zendesk Chat Script-->
+
+    <update-title title="{{pagetitle|removeHTMLTags|strLimit:60}}" ng-cloak ng-if="pagetitle.length"></update-title>
+    <update-title title="{{pagedesc|removeHTMLTags|strLimit:60}}" ng-cloak ng-if="pagedesc.length"></update-title>
+
+
+<!-- <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.min.css'> -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109739635-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-109739635-1');
+    </script>
+
+    <script type="text/javascript"> window.smartlook||(function(d) { var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0]; var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript'; c.charset='utf-8';c.src='https://rec.smartlook.com/recorder.js';h.appendChild(c); })(document); smartlook('init', '3903cd4060bb1bc817b17114ecb69549362997d4'); </script> -->
+  </body>
+  
+</html>
